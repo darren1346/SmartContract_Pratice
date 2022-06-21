@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset='utf-8' />
+<title>ETH02</title>
+
+<script type="text/javascript" src='node_modules/web3/dist/web3.js'></script>
+<script type="text/javascript">; 
+var web3 = new Web3( new Web3.providers.HttpProvider("http://127.0.0.1:8545") );
+console.log("connect web3 via http://127.0.0.1:8545 IS ",web3.isConnected());
+//The following two var must be same as Contyract.log
+var address = '0x7b57f26e744e93d64e3d6cbeaff13172a70867cf';
+var abi = JSON.parse('[{"constant":false,"inputs":[{"name":"data","type":"uint256"}],"name":"set","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"get","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"val","type":"uint256"}],"name":"SetEvent","type":"event"}]');
+
+
+var storageContract = web3.eth.contract(abi);
+var storageInstance = storageContract.at(address);
+
+// watch for changes
+var myEvent = storageInstance.SetEvent({}, {fromBlock: 0, toBlock: 'latest'});
+
+console.log("Start watching events"); 
+myEvent.watch(function(error, result) {
+  var m;
+  if (error) 
+    m=ewrror;
+  else {
+    m="From:"+result.args['from']+" set Value:"+result.args['val'];  
+  }
+  console.log(m);
+  document.getElementById("get").innerText=m;
+});
+</script>
+
+</head>
+
+<body>
+  <div class="header">
+    <h3>Ethereum Web3</h3>
+  </div>
+
+  <div class="jumbotron">
+    <h5>儲存值: <span id="get"> </span> </h5>
+    <br>
+  </div>
+</body>
+</html>
+
+<script type="text/javascript">
+function sleep(delay) {
+    var start = new Date().getTime();
+    while (new Date().getTime() < start + delay);
+}
+
+// Send a transaction to call Set
+console.log("set(10)"); 
+sleep(3000);
+storageInstance.set(10, {from: web3.eth.accounts[0]});
+
+console.log("set(20)"); 
+sleep(3000);
+storageInstance.set(20, {from: web3.eth.accounts[0]});
+
+
+</script>

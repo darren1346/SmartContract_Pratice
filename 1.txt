@@ -1,0 +1,25 @@
+INFO [06-14|13:21:01.784] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [06-14|13:21:01.809] Starting peer-to-peer node               instance=Geth/DemoNode01/v1.8.23-stable-c9427004/windows-amd64/go1.11.5
+INFO [06-14|13:21:01.811] Allocated cache and file handles         database=D:\\nodejsData\\node1\\geth\\chaindata cache=512 handles=8192
+INFO [06-14|13:21:01.825] Writing default main-net genesis block 
+INFO [06-14|13:21:02.063] Persisted trie from memory database      nodes=12356 size=1.88mB time=46.0877ms gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [06-14|13:21:02.064] Initialised chain configuration          config="{ChainID: 1 Homestead: 1150000 DAO: 1920000 DAOSupport: true EIP150: 2463000 EIP155: 2675000 EIP158: 2675000 Byzantium: 4370000 Constantinople: 7280000  ConstantinopleFix: 7280000 Engine: ethash}"
+INFO [06-14|13:21:02.064] Disk storage enabled for ethash caches   dir=D:\\nodejsData\\node1\\geth\\ethash count=3
+INFO [06-14|13:21:02.064] Disk storage enabled for ethash DAGs     dir=C:\\Users\\darre\\AppData\\Ethash   count=2
+INFO [06-14|13:21:02.065] Initialising Ethereum protocol           versions="[63 62]" network=999999
+INFO [06-14|13:21:02.079] Loaded most recent local header          number=0 hash=d4e567…cb8fa3 td=17179869184 age=53y2mo2w
+INFO [06-14|13:21:02.079] Loaded most recent local full block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=53y2mo2w
+INFO [06-14|13:21:02.079] Loaded most recent local fast block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=53y2mo2w
+INFO [06-14|13:21:02.080] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [06-14|13:21:02.088] New local node record                    seq=1 id=36033b759140fdff ip=127.0.0.1 udp=0 tcp=30303
+INFO [06-14|13:21:02.088] Started P2P networking                   self="enode://d03bc8f71a2997336edfd8503ee12a53f27bfc48c3a7d9214e4fca52d507bb78966fc3fc93ea4397ab32530053d17b1f42899c318527c3d5d4de64d7957199c5@127.0.0.1:30303?discport=0"
+INFO [06-14|13:21:02.092] IPC endpoint opened                      url=\\\\.\\pipe\\geth.ipc
+INFO [06-14|13:21:02.093] HTTP endpoint opened                     url=http://127.0.0.1:8545 cors=* vhosts=localhost
+INFO [06-14|13:21:04.285] Mapped network port                      proto=tcp extport=30303 intport=30303 interface="UPNP IGDv1-IP1"
+INFO [06-14|13:24:07.597] New local node record                    seq=2 id=36033b759140fdff ip=172.16.82.2 udp=0 tcp=30303
+INFO [06-14|13:44:38.980] Updated mining threads                   threads=8
+INFO [06-14|13:44:38.980] Transaction pool price threshold updated price=1000000000
+ERROR[06-14|13:44:38.980] Cannot start mining without etherbase    err="etherbase must be explicitly specified"
+INFO [06-14|13:44:47.277] Updated mining threads                   threads=1
+INFO [06-14|13:44:47.277] Transaction pool price threshold updated price=1000000000
+ERROR[06-14|13:44:47.277] Cannot start mining without etherbase    err="etherbase must be explicitly specified"

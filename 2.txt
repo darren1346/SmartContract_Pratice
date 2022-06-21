@@ -1,0 +1,18 @@
+INFO [06-14|13:21:37.557] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [06-14|13:21:37.578] Starting peer-to-peer node               instance=Geth/DemoNode02/v1.8.23-stable-c9427004/windows-amd64/go1.11.5
+INFO [06-14|13:21:37.578] Allocated cache and file handles         database=D:\\nodejsData\\node2\\geth\\chaindata cache=512 handles=8192
+INFO [06-14|13:21:37.582] Writing default main-net genesis block 
+INFO [06-14|13:21:37.809] Persisted trie from memory database      nodes=12356 size=1.88mB time=44.0692ms gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [06-14|13:21:37.809] Initialised chain configuration          config="{ChainID: 1 Homestead: 1150000 DAO: 1920000 DAOSupport: true EIP150: 2463000 EIP155: 2675000 EIP158: 2675000 Byzantium: 4370000 Constantinople: 7280000  ConstantinopleFix: 7280000 Engine: ethash}"
+INFO [06-14|13:21:37.809] Disk storage enabled for ethash caches   dir=D:\\nodejsData\\node2\\geth\\ethash count=3
+INFO [06-14|13:21:37.809] Disk storage enabled for ethash DAGs     dir=C:\\Users\\darre\\AppData\\Ethash   count=2
+INFO [06-14|13:21:37.809] Initialising Ethereum protocol           versions="[63 62]" network=999999
+INFO [06-14|13:21:37.824] Loaded most recent local header          number=0 hash=d4e567…cb8fa3 td=17179869184 age=53y2mo2w
+INFO [06-14|13:21:37.824] Loaded most recent local full block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=53y2mo2w
+INFO [06-14|13:21:37.824] Loaded most recent local fast block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=53y2mo2w
+INFO [06-14|13:21:37.824] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [06-14|13:21:37.830] New local node record                    seq=1 id=1e3089bd2f2a469e ip=127.0.0.1 udp=0 tcp=30304
+INFO [06-14|13:21:37.830] Started P2P networking                   self="enode://2292592040d01e76b1d1a2f5ceb215aa1df4eb9ef4238020379f9952c55810898f964516e9762dddc6600c56234700b548fdacc5be9a0355f3d5ecbba770a38d@127.0.0.1:30304?discport=0"
+INFO [06-14|13:21:37.831] HTTP endpoint opened                     url=http://127.0.0.1:8546 cors=* vhosts=localhost
+INFO [06-14|13:21:40.021] Mapped network port                      proto=tcp extport=30304 intport=30304 interface="UPNP IGDv1-IP1"
+INFO [06-14|13:24:29.613] New local node record                    seq=2 id=1e3089bd2f2a469e ip=172.16.82.2 udp=0 tcp=30304

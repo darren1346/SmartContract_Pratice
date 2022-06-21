@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset='utf-8' />
+<title>ETH01-2</title>
+
+<script type="text/javascript" src='node_modules/web3/dist/web3.js'></script>
+<script type="text/javascript">; 
+var web3 = new Web3( new Web3.providers.HttpProvider("http://127.0.0.1:8546") );
+console.log("connect web3 via http://127.0.0.1:8546 IS ",web3.isConnected());
+</script>
+
+</head>
+
+<body>
+  <div class="header">
+    <h3>Ethereum Web3</h3>
+  </div>
+
+  <div class="jumbotron">
+    <h5>Coinbase Address: <strong id="coinbase"></strong></h5>
+    <h5>帳戶: <strong id="balance"></strong></h5>
+    <h5>最後區塊號: <strong id="latestBlock"></strong></h5>
+    <h5>最後區塊時間戳: <strong id="latestBlockTimestamp"></strong></h5>
+    <h5>最後區塊號之哈希: <strong id="latestBlockHash"></strong></h5>
+    <h5>最後區塊號的大小: <strong id="blockSize"></strong></h5>
+    <h5>父區塊的哈希: <strong id="parentHash"></strong></h5>
+    <h5>Watch latest filter:
+      <div id="watch">
+      </div>
+    </h5>
+    <br>
+  </div>
+</body>
+</html>
+
+<script type="text/javascript">
+document.getElementById("coinbase").innerText=web3.eth.coinbase;
+document.getElementById("balance").innerText=web3.eth.getBalance( web3.eth.accounts[0] )+' Wei';
+var block = web3.eth.getBlock('latest');
+document.getElementById('latestBlock').innerText = block['number'];
+document.getElementById('latestBlockTimestamp').innerText = block['timestamp'];
+document.getElementById('latestBlockHash').innerText = block['hash'];
+document.getElementById('blockSize').innerText = block['size'];
+document.getElementById('parentHash').innerText = block['parentHash'];
+
+// Additionally you can start watching right away, by passing a callback:
+web3.eth.filter('latest', function(error, result){
+  if (!error)
+    document.getElementById("watch").innerText=result;
+});
+</script>

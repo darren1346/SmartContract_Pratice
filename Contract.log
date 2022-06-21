@@ -1,0 +1,2 @@
+0x7b57f26e744e93d64e3d6cbeaff13172a70867cf
+[{"constant":false,"inputs":[{"name":"data","type":"uint256"}],"name":"set","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"get","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"val","type":"uint256"}],"name":"SetEvent","type":"event"}]
